@@ -16,7 +16,10 @@ export const metadata = {
   description: "Emerging luxury fashion designer’s official editorial portfolio website.",
   icons: {
     icon: [
-      { url: '/favicon.png', href: '/favicon.png' },
+      { url: '/favicon.png', href: '/favicon.png', type: 'image/png', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/favicon.png', href: '/favicon.png', type: 'image/png' },
     ],
   },
 };
