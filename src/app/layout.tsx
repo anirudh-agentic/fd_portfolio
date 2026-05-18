@@ -14,6 +14,11 @@ const bodoni = Bodoni_Moda({
 export const metadata = {
   title: "K.A. Harshita | Fashion Designer",
   description: "Emerging luxury fashion designer’s official editorial portfolio website.",
+  icons: {
+    icon: [
+      { url: '/favicon.png', href: '/favicon.png' },
+    ],
+  },
 };
 
 export default function RootLayout({
