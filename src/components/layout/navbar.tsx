@@ -45,21 +45,23 @@ export function Navbar() {
         isScrolled ? "bg-[#F4F1EA]/80 backdrop-blur-md" : "bg-transparent"
       )}
     >
-      <Link href="/" className="font-serif text-xl tracking-wider text-foreground">
-        K.A. HARSHITA
-      </Link>
+      <div className="flex items-center gap-12">
+        <Link href="/" className="font-serif text-xl tracking-wider text-foreground">
+          K.A. HARSHITA
+        </Link>
 
-      <nav className="hidden items-center gap-8 md:flex">
-        {links.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className="text-sm uppercase tracking-widest text-foreground/80 transition-colors hover:text-foreground"
-          >
-            {link.name}
-          </Link>
-        ))}
-      </nav>
+        <nav className="hidden items-center gap-8 md:flex">
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-sm uppercase tracking-widest text-foreground/80 transition-colors hover:text-foreground"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+      </div>
 
       {/* Mobile Menu Button - Minimal */}
       <button className="flex flex-col gap-1.5 md:hidden">
