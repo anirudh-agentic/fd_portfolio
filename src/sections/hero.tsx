@@ -48,7 +48,7 @@ export function HeroSection() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 2.2 }}
-            className="text-center font-serif text-4xl uppercase tracking-widest text-[#F4F1EA] md:text-6xl lg:text-7xl leading-tight"
+            className="text-center font-serif text-4xl uppercase tracking-[0.25em] text-[#F4F1EA]/90 font-light md:text-5xl lg:text-6xl leading-tight drop-shadow-md"
           >
             K.A. Harshita
           </motion.h1>
