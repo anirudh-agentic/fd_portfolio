@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const illustrations = Array.from({ length: 19 }, (_, i) => `/images/illus${i + 1}.png`);
+const illustrations = [
+  ...Array.from({ length: 19 }, (_, i) => `/images/illus${i + 1}.png`)
+    .filter((src) => !['/images/illus10.png', '/images/illus11.png', '/images/illus12.png', '/images/illus13.png'].includes(src)),
+  '/images/fuzonics.png'
+];
 
 export function IllustrationsSection() {
   return (
@@ -34,8 +38,10 @@ export function IllustrationsSection() {
                 <Image
                   src={src}
                   alt={`Fashion Illustration ${index + 1}`}
-                  width={800}
-                  height={1200}
+                  width={1200}
+                  height={1800}
+                  quality={100}
+                  unoptimized
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105 w-full h-auto"
                 />
               </div>

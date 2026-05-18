@@ -12,13 +12,13 @@ export function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
-    
+
     if (latest > previous && latest > 150) {
       setHidden(true);
     } else {
       setHidden(false);
     }
-    
+
     if (latest > 50) {
       setIsScrolled(true);
     } else {
@@ -29,7 +29,6 @@ export function Navbar() {
   const links = [
     { name: "Collections", href: "#collections" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
   ];
 
   return (

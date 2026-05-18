@@ -10,10 +10,17 @@ const collections = [
     title: "Beneath the Surface",
     theme: "Emotions, grief, hidden truths",
     description: "A profound exploration of the emotional spectrum, conceptualized through complex layering, deep shadows, and visceral fabric manipulation.",
-    image: "/images/collection1.png",
+    image: "/images/collection-beneath.png",
     detailImages: [
       "/images/beneath-surface-explore.png",
-      "/images/beneath-surface-inspiration.png"
+      "/images/beneath-surface-inspiration.png",
+      "/images/beneath-surface-mood-board.png",
+      "/images/beneath-surface-illustrations.png",
+      "/images/denial.png",
+      "/images/anger.png",
+      "/images/Bargaining.png",
+      "/images/dprsn.png",
+      "/images/acpt.png"
     ],
     textColor: "text-[#D8D0C5]",
     bgColor: "bg-[#111111]"
@@ -23,7 +30,23 @@ const collections = [
     title: "Dwarka: The Lost City",
     theme: "Ancient underwater civilization",
     description: "Mystical luxury meets mythological storytelling. Inspired by submerged ancient architecture, featuring fluid silhouettes and aquatic distortions.",
-    image: "/images/collection2.png",
+    image: "/images/dwarka.png",
+    detailImages: [
+      "/images/dwarka.png",
+      "/images/dwarka1.png",
+      "/images/dwarka2.png",
+      "/images/dwarka3.png",
+      "/images/dwarka4.png",
+      "/images/dwarka5.png",
+      "/images/dwarka6.png",
+      "/images/dwarka7.png",
+      "/images/dwarka8.png",
+      "/images/dwarka9.png",
+      "/images/dwarka10.png",
+      "/images/dwarka11.png",
+      "/images/dwarka12.png",
+      "/images/dwarka13.png"
+    ],
     textColor: "text-[#F4F1EA]",
     bgColor: "bg-[#1D2840]"
   },
@@ -67,7 +90,7 @@ export function CollectionsSection() {
       </section>
 
       <AnimatePresence>
-        {activeCollection?.detailImages && (
+        {activeCollection && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -95,7 +118,7 @@ export function CollectionsSection() {
                 Scroll Down to View More
               </div>
               <div className="flex flex-col gap-16 py-12 items-center min-h-full mt-8">
-                {activeCollection.detailImages.map((img, idx) => (
+                {(activeCollection.detailImages || [activeCollection.image]).map((img, idx) => (
                   <div key={idx} className="relative w-full max-w-5xl aspect-video md:aspect-auto md:h-[80vh] flex-shrink-0">
                     <Image 
                       src={img}
@@ -175,19 +198,12 @@ function CollectionPanel({
               </p>
             </div>
             
-            {collection.detailImages && (
-              <button 
-                onClick={onExplore}
-                className="mt-12 group relative inline-flex items-center gap-4 overflow-hidden border border-current px-8 py-3 text-sm uppercase tracking-widest transition-all hover:bg-current hover:text-black cursor-pointer"
-              >
-                <span className="relative z-10 transition-colors duration-300">Explore Collection</span>
-              </button>
-            )}
-            {!collection.detailImages && (
-              <button className="mt-12 group relative inline-flex items-center gap-4 overflow-hidden border border-current/20 px-8 py-3 text-sm uppercase tracking-widest transition-all opacity-50 cursor-not-allowed">
-                <span className="relative z-10">Coming Soon</span>
-              </button>
-            )}
+            <button 
+              onClick={onExplore}
+              className="mt-12 group relative inline-flex items-center gap-4 overflow-hidden border border-current px-8 py-3 text-sm uppercase tracking-widest transition-all hover:bg-current hover:text-black cursor-pointer"
+            >
+              <span className="relative z-10 transition-colors duration-300">Explore Collection</span>
+            </button>
           </motion.div>
         </div>
 
