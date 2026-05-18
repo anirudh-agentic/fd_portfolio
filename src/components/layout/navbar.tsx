@@ -29,6 +29,7 @@ export function Navbar() {
   const links = [
     { name: "Collections", href: "#collections" },
     { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
