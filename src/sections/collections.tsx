@@ -22,7 +22,7 @@ const collections = [
       "/images/anger.png",
       "/images/Bargaining.png",
       "/images/dprsn.png",
-      "/images/acpt.png"
+      "/images/accept.png"
     ],
     textColor: "text-[#D8D0C5]",
     bgColor: "bg-[#111111]"
