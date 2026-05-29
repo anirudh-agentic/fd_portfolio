@@ -15,6 +15,8 @@ const collections = [
       "/images/beneath-surface-explore.png",
       "/images/beneath-surface-inspiration.png",
       "/images/beneath-surface-mood-board.png",
+      "/images/8.jpg",
+      "/images/9.jpg",
       "/images/beneath-surface-illustrations.png",
       "/images/denial.png",
       "/images/anger.png",
